@@ -58,8 +58,8 @@ function Home() {
 
           <div className="relative">
             <img
-                 src="https://i.pinimg.com/1200x/97/1d/9e/971d9e37d64e09c708c29010a9f394c3.jpg"
-              alt="Luxury Modular Kitchen Mumbai"
+                 src="./public/Home1.jpg"
+              fetchpriority="high"
               className="rounded-[45px] shadow-[0_40px_80px_rgba(0,0,0,0.35)]"
             />
           </div>
@@ -92,7 +92,7 @@ function Home() {
           <div>
             <img
           
-               src="https://i.pinimg.com/1200x/8c/25/25/8c25256a69be09fb1fea374e655e372f.jpg"
+               src="./public/Home2.jpg"
               alt="Luxury Living Room Interior"
               className="rounded-[35px] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
             />
@@ -173,9 +173,9 @@ function Home() {
   <div className="grid md:grid-cols-3 gap-12">
 
     {[
-      "https://i.pinimg.com/736x/f5/78/d8/f578d80c8b27973615d1db51025e8efa.jpg",
-      "https://i.pinimg.com/736x/d1/44/02/d144029c219f61fb564945c7c139be32.jpg",
-      "https://i.pinimg.com/1200x/b6/c4/fd/b6c4fdb2ffafaf609fee736c03be9a65.jpg"
+      "./public/Pic1.jpg",
+      "./public/Pic2.jpg",
+      "./public/Pic3.jpg",
     ].map((img, index) => (
       <div
         key={index}

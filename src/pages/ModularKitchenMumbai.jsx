@@ -118,10 +118,10 @@ function ModularKitchenMumbai() {
   <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
 
     {[
-      { title: "L-Shape", image: "https://i.pinimg.com/1200x/fa/16/05/fa16050a2e431ba96456250b3aa2a56e.jpg" },
-      { title: "U-Shape", image: "https://i.pinimg.com/736x/42/8d/e5/428de5664b58a17e49bc3515fd148955.jpg" },
-      { title: "Parallel", image: "https://i.pinimg.com/736x/20/e2/98/20e2988fdd6bd1df9d19197dac380ed4.jpg" },
-      { title: "Island", image: "https://i.pinimg.com/1200x/81/1d/02/811d0294dfcefbfb18211c01b20dda73.jpg" }
+      { title: "L-Shape", image: "./public/L-shape.jpg" },
+      { title: "U-Shape", image: "./public/U-shape.jpg" },
+      { title: "Parallel", image: "./public/parallel.jpg" },
+      { title: "Island", image: "./public/island.jpg" }
     ].map((layout) => (
       <div key={layout.title} className="group text-center">
 
@@ -131,6 +131,8 @@ function ModularKitchenMumbai() {
           <img
             src={layout.image}
             alt={`${layout.title} Kitchen Layout`}
+            loading="lazy"
+  decoding="async"
             className="w-full h-64 object-cover transition duration-700 group-hover:scale-110"
           />
 
@@ -154,8 +156,9 @@ function ModularKitchenMumbai() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-28 items-center">
             <div>
               <img
-                src="https://i.pinimg.com/736x/fb/96/62/fb9662d3492c4ecd8e52d34d00d6b5e7.jpg" // Placeholder image for finishes
-                alt="Kitchen finishes and materials"
+                src="./public/Materials.jpg" // Placeholder image for finishes
+                loading="lazy"
+  decoding="async"
                 className="rounded-[35px] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
               />
             </div>

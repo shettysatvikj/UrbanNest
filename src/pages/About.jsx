@@ -89,7 +89,8 @@ function About() {
             >
               <img
                 src="/About.jpg"
-                alt="UrbanNest Interiors Team"
+                loading="lazy"
+  decoding="async"
                 className="w-full h-[420px] object-cover transition duration-700 hover:scale-105"
               />
             </motion.div>
