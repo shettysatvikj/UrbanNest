@@ -9,28 +9,38 @@ function ExitIntentPopup() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    if (hasTriggered) return;
+ useEffect(() => {
+  if (hasTriggered) return;
 
-    // Push a fake history state
-    window.history.pushState(null, "", window.location.href);
+  // ---------- DESKTOP EXIT (Mouse to top) ----------
+  const handleMouseLeave = (e) => {
+    if (e.clientY <= 0 && !hasTriggered) {
+      setShowPopup(true);
+      setHasTriggered(true);
+    }
+  };
 
-    const handlePopState = () => {
-      if (!hasTriggered) {
-        setShowPopup(true);
-        setHasTriggered(true);
+  // ---------- MOBILE / BACK BUTTON ----------
+  window.history.pushState(null, "", window.location.href);
 
-        // Push again so user doesn't instantly leave
-        window.history.pushState(null, "", window.location.href);
-      }
-    };
+  const handlePopState = () => {
+    if (!hasTriggered) {
+      setShowPopup(true);
+      setHasTriggered(true);
 
-    window.addEventListener("popstate", handlePopState);
+      // Prevent immediate exit
+      window.history.pushState(null, "", window.location.href);
+    }
+  };
 
-    return () => {
-      window.removeEventListener("popstate", handlePopState);
-    };
-  }, [hasTriggered]);
+  document.addEventListener("mouseleave", handleMouseLeave);
+  window.addEventListener("popstate", handlePopState);
+
+  return () => {
+    document.removeEventListener("mouseleave", handleMouseLeave);
+    window.removeEventListener("popstate", handlePopState);
+  };
+}, [hasTriggered]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
