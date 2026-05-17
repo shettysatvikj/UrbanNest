@@ -16,14 +16,15 @@ const fadeUp = {
 
 function ModularKitchenMumbai() {
   const [show3DModal, setShow3DModal] = useState(false);
-  <Helmet>
+ 
+  return (
+    <> <Helmet>
   <title>Modular Kitchen in Mumbai | Factory-Finished Kitchens</title>
   <meta
     name="description"
     content="Looking for modular kitchen in Mumbai? Get factory-finished kitchens with humidity-resistant boards and transparent pricing."
   />
 </Helmet>
-  return (
     <div className="bg-[#E6DFD6] text-[#1C1C1C] overflow-hidden">
 
       {/* ================= HERO ================= */}
@@ -216,6 +217,7 @@ function ModularKitchenMumbai() {
   onClose={() => setShow3DModal(false)}
 />
     </div>
+    </>
   );
 }
 
