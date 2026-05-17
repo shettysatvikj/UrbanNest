@@ -62,7 +62,10 @@ function Portfolio() {
     activeFilter === "All"
       ? projects
       : projects.filter((p) => p.type === activeFilter);
-      <Helmet>
+      
+
+  return (
+    <><Helmet>
   <title>Interior Design Portfolio Mumbai | Modular Kitchen & Home Projects</title>
   <meta
     name="description"
@@ -73,8 +76,6 @@ function Portfolio() {
     content="Interior design portfolio Mumbai, Modular kitchen projects Mumbai, Completed home interiors Mumbai"
   />
 </Helmet>
-
-  return (
     <div className="bg-[#F7F3ED] text-[#1C1C1C] overflow-hidden">
 
       {/* ================= HERO ================= */}
@@ -210,6 +211,7 @@ function Portfolio() {
       </section>
 
     </div>
+    </>
   );
 }
 
