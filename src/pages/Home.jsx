@@ -62,7 +62,7 @@ function Home() {
                  src="/Home1.jpg"
               fetchpriority="high"
 
-                 src="./public/Home1.jpg"
+               
               alt="Luxury Modular Kitchen Mumbai"
 
               className="rounded-[45px] shadow-[0_40px_80px_rgba(0,0,0,0.35)]"
