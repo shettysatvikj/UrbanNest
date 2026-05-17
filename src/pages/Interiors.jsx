@@ -10,7 +10,10 @@ const fadeUp = {
 };
 
 function Interiors() {
-  <Helmet>
+  
+  return (
+    <>
+    <Helmet>
   <title>2BHK & 3BHK Home Interiors in Mumbai | Turnkey Interior Solutions</title>
   <meta
     name="description"
@@ -21,7 +24,6 @@ function Interiors() {
     content="2BHK interiors Mumbai, 3BHK interiors Mumbai, Full home interiors Mumbai, Turnkey interior Mumbai"
   />
 </Helmet>
-  return (
     <div className="bg-[#E6DFD6] text-[#1C1C1C] overflow-hidden">
 
       
@@ -189,6 +191,7 @@ function Interiors() {
       </section>
 
     </div>
+    </>
   );
 }
 
