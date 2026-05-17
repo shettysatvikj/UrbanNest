@@ -58,7 +58,7 @@ function Home() {
 
           <div className="relative">
             <img
-                 src="./public/Home1.jpg"
+                 src="/Home1.jpg"
               fetchpriority="high"
               className="rounded-[45px] shadow-[0_40px_80px_rgba(0,0,0,0.35)]"
             />
@@ -92,7 +92,7 @@ function Home() {
           <div>
             <img
           
-               src="./public/Home2.jpg"
+               src="/Home2.jpg"
               alt="Luxury Living Room Interior"
               className="rounded-[35px] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
             />
@@ -173,9 +173,9 @@ function Home() {
   <div className="grid md:grid-cols-3 gap-12">
 
     {[
-      "./public/Pic1.jpg",
-      "./public/Pic2.jpg",
-      "./public/Pic3.jpg",
+      "/Pic1.jpg",
+      "/Pic2.jpg",
+      "/Pic3.jpg",
     ].map((img, index) => (
       <div
         key={index}
