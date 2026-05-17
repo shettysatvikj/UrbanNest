@@ -99,8 +99,8 @@ function ModularKitchenMumbai() {
 
     {/* Slider Component */}
     <BeforeAfterSlider
-      beforeImage="./public/Before Kitchen.png" // Put old kitchen image here
-      afterImage="./public/After Kitchen.png"  // Put new luxury kitchen here
+      beforeImage="/Before Kitchen.png" // Put old kitchen image here
+      afterImage="/After Kitchen.png"  // Put new luxury kitchen here
       beforeLabel="Old Kitchen (Carpentry)"
       afterLabel="UrbanNest Modular Kitchen"
     />
@@ -118,10 +118,10 @@ function ModularKitchenMumbai() {
   <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
 
     {[
-      { title: "L-Shape", image: "./public/L-shape.jpg" },
-      { title: "U-Shape", image: "./public/U-shape.jpg" },
-      { title: "Parallel", image: "./public/parallel.jpg" },
-      { title: "Island", image: "./public/island.jpg" }
+      { title: "L-Shape", image: "/L-shape.jpg" },
+      { title: "U-Shape", image: "/U-shape.jpg" },
+      { title: "Parallel", image: "/parallel.jpg" },
+      { title: "Island", image: "/island.jpg" }
     ].map((layout) => (
       <div key={layout.title} className="group text-center">
 
@@ -156,7 +156,7 @@ function ModularKitchenMumbai() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-28 items-center">
             <div>
               <img
-                src="./public/Materials.jpg" // Placeholder image for finishes
+                src="/Materials.jpg" // Placeholder image for finishes
                 loading="lazy"
   decoding="async"
                 className="rounded-[35px] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
