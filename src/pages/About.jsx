@@ -88,7 +88,7 @@ function About() {
               className="relative overflow-hidden rounded-[40px] shadow-[0_30px_80px_rgba(0,0,0,0.15)]"
             >
               <img
-                src="/About.jpg"
+                src="./public/About.jpg"
                 loading="lazy"
   decoding="async"
                 className="w-full h-[420px] object-cover transition duration-700 hover:scale-105"
