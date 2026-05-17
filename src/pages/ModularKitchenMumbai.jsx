@@ -99,8 +99,8 @@ function ModularKitchenMumbai() {
 
     {/* Slider Component */}
     <BeforeAfterSlider
-      beforeImage="/Before Kitchen.png" // Put old kitchen image here
-      afterImage="/After Kitchen.png"  // Put new luxury kitchen here
+      beforeImage="/Before Kitchen.webp" // Put old kitchen image here
+      afterImage="/After Kitchen.webp"  // Put new luxury kitchen here
       beforeLabel="Old Kitchen (Carpentry)"
       afterLabel="UrbanNest Modular Kitchen"
     />

@@ -24,34 +24,35 @@ function Interiors() {
   return (
     <div className="bg-[#E6DFD6] text-[#1C1C1C] overflow-hidden">
 
-      {/* ================= HERO ================= */}
-      <section className="pt-40 pb-32 px-10 text-center bg-[#D4C8BB]">
+      
+        {/* ================= HERO ================= */}
+        <section className="pt-32 md:pt-40 pb-20 md:pb-32 px-6 md:px-10 text-center bg-[#D4C8BB]">
 
-        <motion.div initial="hidden" animate="show" variants={fadeUp}>
-          <h1 className="text-5xl md:text-6xl font-light leading-tight">
-            Complete Home Interiors
-            <span className="block font-medium text-[#8F735A]">
-              Designed for Modern Mumbai Living.
-            </span>
-          </h1>
+          <motion.div initial="hidden" animate="show" variants={fadeUp}>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight">
+              Complete Home Interiors
+              <span className="block font-medium text-[#8F735A]">
+                Designed for Modern Mumbai Living.
+              </span>
+            </h1>
 
-          <p className="mt-8 text-lg max-w-3xl mx-auto text-[#2E2A26]">
-            From 2BHK apartments to luxury 3BHK residences,
-            we deliver turnkey interiors with precision,
-            transparency, and premium craftsmanship.
-          </p>
+            <p className="mt-6 md:mt-8 text-base md:text-lg max-w-3xl mx-auto text-[#2E2A26]">
+              From 2BHK apartments to luxury 3BHK residences,
+              we deliver turnkey interiors with precision,
+              transparency, and premium craftsmanship.
+            </p>
 
-          <div className="mt-12">
-            <Link
-              to="/contact"
-              className="px-14 py-5 bg-[#1C1C1C] text-white rounded-full text-lg shadow-lg hover:scale-105 transition"
-            >
-              Get Free Interior Consultation
-            </Link>
-          </div>
-        </motion.div>
+            <div className="mt-8 md:mt-12">
+              <Link
+                to="/contact"
+                className="inline-block px-8 sm:px-10 md:px-14 py-3 md:py-5 bg-[#1C1C1C] text-white rounded-full text-sm sm:text-base md:text-lg shadow-lg hover:scale-105 transition"
+              >
+                Get Free Interior Consultation
+              </Link>
+            </div>
+          </motion.div>
 
-      </section>
+        </section>
 
      {/* ================= BEFORE / AFTER LIVING ROOM TRANSFORMATION ================= */}
 <section className="py-40 px-8 bg-[#F6F1EA]">
@@ -71,8 +72,8 @@ function Interiors() {
 
     {/* Slider Component */}
     <BeforeAfterSlider
-      beforeImage="/Before-Living.png" // Put raw/empty room image here
-      afterImage="/After-Living.png"   // Put finished luxury living room here
+      beforeImage="/Before-Living.webp" // Put raw/empty room image here
+      afterImage="/After-Living.webp"   // Put finished luxury living room here
       beforeLabel="Builder Finish (Bare)"
       afterLabel="Turnkey Interior Execution"
     />
