@@ -71,8 +71,8 @@ function Interiors() {
 
     {/* Slider Component */}
     <BeforeAfterSlider
-      beforeImage="./public/Before-Living.png" // Put raw/empty room image here
-      afterImage="./public/After-Living.png"   // Put finished luxury living room here
+      beforeImage="/Before-Living.png" // Put raw/empty room image here
+      afterImage="/After-Living.png"   // Put finished luxury living room here
       beforeLabel="Builder Finish (Bare)"
       afterLabel="Turnkey Interior Execution"
     />
