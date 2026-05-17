@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet-async";
 
 
 function Contact() {
-  <Helmet>
+ 
+  return (
+    <> <Helmet>
   <title>Contact UrbanNest Interiors | Book Free 3D Design Consultation</title>
   <meta
     name="description"
@@ -14,7 +16,6 @@ function Contact() {
     content="Contact interior designer Mumbai, Book modular kitchen consultation Mumbai, Free 3D kitchen design"
   />
 </Helmet>
-  return (
     <div className="bg-[#F4EFE8] text-[#1C1C1C] overflow-hidden">
 
       {/* ================= HERO ================= */}
@@ -161,6 +162,7 @@ function Contact() {
       </section>
 
     </div>
+    </>
   );
 }
 
