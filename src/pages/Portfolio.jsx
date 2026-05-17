@@ -9,7 +9,7 @@ const projects = [
     title: "3BHK — Powai",
     type: "Full Home",
     cost: "₹12 Lakhs",
-    image: "./public/P1.jpg",
+    image: "/P1.jpg",
     size: "large"
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     title: "Modular Kitchen — Andheri",
     type: "Kitchen",
     cost: "₹3.2 Lakhs",
-    image: "./public/P2.jpg",
+    image: "/P2.jpg",
     size: "small"
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     title: "2BHK — Thane",
     type: "Full Home",
     cost: "₹8.5 Lakhs",
-    image: "./public/P3.jpg",
+    image: "/P3.jpg",
     size: "small"
   },
   {
@@ -33,7 +33,7 @@ const projects = [
     title: "L-Shape Kitchen — Bandra",
     type: "Kitchen",
     cost: "₹2.8 Lakhs",
-    image: "./public/P4.jpg",
+    image: "/P4.jpg",
     size: "small"
   },
   {
@@ -41,7 +41,7 @@ const projects = [
     title: "3BHK — Navi Mumbai",
     type: "Full Home",
     cost: "₹14 Lakhs",
-    image: "./public/P6.jpg",
+    image: "/P6.jpg",
     size: "large"
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     title: "Parallel Kitchen — Powai",
     type: "Kitchen",
     cost: "₹2.5 Lakhs",
-    image: "./public/P5.jpg",
+    image: "/P5.jpg",
     size: "small"
   }
 ];
