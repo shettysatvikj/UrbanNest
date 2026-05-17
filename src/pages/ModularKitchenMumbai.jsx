@@ -190,7 +190,7 @@ function ModularKitchenMumbai() {
         </p>
         <div className="mt-10">
           <Link
-            to="/pricing"
+            to="/estimate"
             className="px-14 py-5 border border-[#1C1C1C] rounded-full text-lg shadow-lg hover:bg-[#1C1C1C] hover:text-white transition"
           >
             Explore Pricing Details
