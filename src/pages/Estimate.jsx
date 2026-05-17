@@ -44,7 +44,10 @@ function Estimate() {
   const formatted = animatedValue.toLocaleString("en-IN");
 
   let numericIndex = 0;
-  <Helmet>
+
+
+  return (
+    <>  <Helmet>
   <title>Modular Kitchen Cost Calculator Mumbai | Get Instant Estimate</title>
   <meta
     name="description"
@@ -55,8 +58,6 @@ function Estimate() {
     content="Modular kitchen cost Mumbai, Kitchen cost calculator Mumbai, Interior cost estimate Mumbai"
   />
 </Helmet>
-
-  return (
     <div className="min-h-screen bg-[#F6F1EA] text-[#1C1C1C] flex items-center justify-center px-8 py-32">
 
       <div className="max-w-6xl w-full">
@@ -255,6 +256,7 @@ function Estimate() {
       </AnimatePresence>
 
     </div>
+    </>
   );
 }
 
