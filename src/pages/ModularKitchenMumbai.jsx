@@ -120,7 +120,7 @@ function ModularKitchenMumbai() {
     {[
       { title: "L-Shape", image: "/L-shape.jpg" },
       { title: "U-Shape", image: "/U-shape.jpg" },
-      { title: "Parallel", image: "/parallel.jpg" },
+      { title: "Parallel", image: "/Parallel.jpg" },
       { title: "Island", image: "/island.jpg" }
     ].map((layout) => (
       <div key={layout.title} className="group text-center">
@@ -156,7 +156,7 @@ function ModularKitchenMumbai() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-28 items-center">
             <div>
               <img
-                src="/Materials.jpg" // Placeholder image for finishes
+                src="/Material.jpg" // Placeholder image for finishes
                 loading="lazy"
   decoding="async"
                 className="rounded-[35px] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
