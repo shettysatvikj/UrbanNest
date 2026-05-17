@@ -5,23 +5,32 @@ import emailjs from "@emailjs/browser";
 
 function ExitIntentPopup() {
   const [showPopup, setShowPopup] = useState(false);
-  const [hasShown, setHasShown] = useState(false);
+  const [hasTriggered, setHasTriggered] = useState(false);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    const handleMouseLeave = (e) => {
-      if (e.clientY <= 0 && !hasShown) {
+    if (hasTriggered) return;
+
+    // Push a fake history state
+    window.history.pushState(null, "", window.location.href);
+
+    const handlePopState = () => {
+      if (!hasTriggered) {
         setShowPopup(true);
-        setHasShown(true);
+        setHasTriggered(true);
+
+        // Push again so user doesn't instantly leave
+        window.history.pushState(null, "", window.location.href);
       }
     };
 
-    document.addEventListener("mouseleave", handleMouseLeave);
+    window.addEventListener("popstate", handlePopState);
+
     return () => {
-      document.removeEventListener("mouseleave", handleMouseLeave);
+      window.removeEventListener("popstate", handlePopState);
     };
-  }, [hasShown]);
+  }, [hasTriggered]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +41,7 @@ function ExitIntentPopup() {
     const templateParams = {
       user_email: form.email.value,
       user_phone: form.phone.value,
-     pdf_link: window.location.origin + "/5-mistakes.pdf"
+      pdf_link: window.location.origin + "/5-mistakes.pdf"
     };
 
     emailjs
@@ -67,25 +76,29 @@ function ExitIntentPopup() {
             animate={{ scale: 1 }}
             exit={{ scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="bg-white w-full max-w-lg p-12 rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.2)] relative"
+            className="bg-white w-full max-w-lg p-10 md:p-12 rounded-[40px] shadow-[0_40px_100px_rgba(0,0,0,0.2)] relative"
           >
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute top-6 right-6 text-gray-500"
+              className="absolute top-6 right-6 text-gray-500 hover:text-black transition"
+              type="button"
+              aria-label="Close popup"
             >
               <X size={18} />
             </button>
 
             {!success ? (
               <>
-                <h2 className="text-3xl font-light mb-4">
+                <h2 className="text-2xl md:text-3xl font-light mb-4">
                   Before You Leave…
                 </h2>
 
-                <p className="text-gray-600 mb-8">
+                <p className="text-gray-600 mb-8 text-sm md:text-base leading-relaxed">
                   Download our FREE PDF:
                   <br />
-                  <strong>5 Costly Mistakes Homeowners Make During Interior Projects</strong>
+                  <strong>
+                    5 Costly Mistakes Homeowners Make During Interior Projects
+                  </strong>
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -95,7 +108,7 @@ function ExitIntentPopup() {
                     type="email"
                     placeholder="Your Email"
                     required
-                    className="w-full p-4 rounded-xl border border-gray-200"
+                    className="w-full p-4 rounded-xl border border-gray-200 focus:border-[#A67C52] outline-none transition"
                   />
 
                   <input
@@ -103,7 +116,7 @@ function ExitIntentPopup() {
                     type="tel"
                     placeholder="Phone Number"
                     required
-                    className="w-full p-4 rounded-xl border border-gray-200"
+                    className="w-full p-4 rounded-xl border border-gray-200 focus:border-[#A67C52] outline-none transition"
                   />
 
                   <button
@@ -118,10 +131,10 @@ function ExitIntentPopup() {
               </>
             ) : (
               <div className="text-center">
-                <h3 className="text-2xl font-light mb-4">
+                <h3 className="text-xl md:text-2xl font-light mb-4">
                   ✅ Check Your Email
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm md:text-base">
                   Your free PDF has been sent successfully.
                 </p>
               </div>
